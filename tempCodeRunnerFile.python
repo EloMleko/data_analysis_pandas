@@ -1,9 +1,0 @@
-import pandas as pd
-
-sol_30 = pd.Series(['Red', 'Green', 'Orange', 'Pink', 'Yellow', 'White'])
-
-sol_30_1 = sol_30.apply(lambda item: sum(1 for ch in item.lower() if ch in ['a', 'o', 'i', 'e', 'y'])).to_list()
-
-def vowel(series):
-    return [1 for ch in item.lower() else 0 if ch in ['a', 'o', 'i', 'e', 'y'] for item in series] 
-print(vowel(sol_30))
